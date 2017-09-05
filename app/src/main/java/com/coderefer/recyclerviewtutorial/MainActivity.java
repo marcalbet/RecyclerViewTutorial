@@ -108,6 +108,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+             case R.id.item_linear:
+//              use this in case of linear layout manager
+                mLayoutManager = new LinearLayoutManager(this);
+                mRecyclerView.setLayoutManager(mLayoutManager);
+                setAnimation();
+                break;
             case R.id.item_grid:
 //              use this in case of gridlayoutmanager
                 mLayoutManager = new GridLayoutManager(this, 2);
